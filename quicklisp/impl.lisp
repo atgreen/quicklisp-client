@@ -259,6 +259,12 @@
                   #:socket-connect
                   #:socket-make-stream))
 
+;;; Evergreen Common Lisp
+
+(define-implementation-package :egcl #:ql-egcl
+  (:documentation "Evergreen Common Lisp - https://github.com/atgreen/evergreen")
+  (:class egcl))
+
 ;;; Mezzano
 
 (define-implementation-package :mezzano #:ql-mezzano

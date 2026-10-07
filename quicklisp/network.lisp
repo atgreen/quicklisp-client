@@ -65,6 +65,9 @@
                                  :input t
                                  :output t
                                  :buffering :full)))
+  #+egcl
+  (:implementation egcl
+    (egcl::%socket-connect host port))
   (:implementation mezzano
     (ql-mezzano:tcp-stream-connect host port
                                    :element-type '(unsigned-byte 8)))

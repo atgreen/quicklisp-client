@@ -51,6 +51,7 @@
            #:cmucl
            #:cormanlisp
            #:ecl
+           #:egcl
            #:gcl
 	   #:genera
            #:lispworks
