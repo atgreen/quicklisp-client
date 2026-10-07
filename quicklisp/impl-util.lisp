@@ -265,6 +265,11 @@ quicklisp at CL startup."
 	      collect pathname)))
   (:implementation mezzano
     (directory (merge-pathnames *wild-entry* directory)))
+  #+egcl
+  (:implementation egcl
+    (nconc
+     (directory (merge-pathnames *wild-entry* directory))
+     (directory (merge-pathnames *wild-relative* directory))))
   (:implementation mkcl
     (setf directory (truename directory))
     (nconc
@@ -359,4 +364,3 @@ potentially dead symlinks."
           (if (directoryp entry)
               (push entry directories-to-process)
               (funcall fun entry)))))))
-
